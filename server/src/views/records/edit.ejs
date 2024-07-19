@@ -1,0 +1,126 @@
+<%- include('../layouts/head.ejs'); %>
+<!--Spinner start-->
+<%- include('../layouts/spinner.ejs'); %>
+<!--Spinner end-->
+
+<!-- Sidebard start-->
+<%- include('../partials/sidebard.ejs'); %>
+<!-- Sidebard end-->
+
+<!--navbar start-->
+<%- include('../partials/navbar.ejs'); %>
+<!--navbar end-->
+
+<!--Conten start-->
+
+<div class="container-fluid pt-4 px-4 card">
+  <div class="card mb-2" style="background-color: rgb(243, 244, 253);">
+    <div class="card-header" style="background-color: rgb(232, 239, 248);">
+      <h6 class="text-secondary mt-2" id="recordID" data-id="<%= id %>">
+        <i class="bi bi-pencil-square"></i>
+        Editar Expediente
+      </h6>
+    </div>
+    <div class="card-body">
+      <form class="row g-3 needs-validation" id="formEditRecord">
+        <div class="col-md-6 position-relative">
+          <label for="validationTooltip04"
+            class="form-label">Departamento</label>
+          <select class="form-select input" id="selectDepar" name="selectDepar"
+            >
+            <option selected disabled>Selecciona una opción</option>
+          </select>
+        </div>
+        <div class="col-md-6 position-relative">
+          <label for="validationTooltip04" class="form-label">Localidad</label>
+          <select class="form-select input" id="selecLocalidad"
+            name="selecLocalidad" >
+            <option selected disabled>Selecciona una opción</option>
+          </select>
+        </div>
+        <div class="col-md-6 position-relative">
+          <label for="validationTooltip04" class="form-label">Tipo</label>
+          <select class="form-select input" id="selectType" name="selectType"
+            >
+            <option selected disabled>Selecciona una opción</option>
+          </select>
+        </div>
+        <div class="col-md-6 position-relative">
+          <label for="validationTooltip04"
+            class="form-label">Circunscripción</label>
+          <select class="form-select input" id="selectDistrict"
+            name="selectDistrict" >
+            <option selected disabled>Selecciona una opción</option>
+          </select>
+        </div>
+        <div class="col-md-6 position-relative">
+          <label for="validationTooltip04" class="form-label">Juzgado</label>
+          <select class="form-select input" id="selectCourt" name="selectCourt"
+            >
+            <option selected disabled>Selecciona una opción</option>
+          </select>
+        </div>
+        <div class="col-6">
+          <label for="validationCustom05" class="form-label">Fecha de
+            Inicio</label>
+          <input type="date" class="form-control" id="dateStart" >
+        </div>
+        <div class="col-6">
+          <label for="validationCustom05" class="form-label">Fecha
+            Origen</label>
+          <input type="date" class="form-control" id="dateOrigin" >
+        </div>
+        <div class="col-6">
+          <label for="validationCustom05" class="form-label">Orden</label>
+          <input type="number" class="form-control" id="order" >
+        </div>
+        <div class="col-6">
+          <label for="validationCustom05" class="form-label">Secretario</label>
+          <input type="text" class="form-control" id="secretary" >
+        </div>
+        <div class="col-6">
+          <label for="validationCustom05" class="form-label">Iniciado por:</label>
+          <select class="form-select" name="origin" id="origin">
+            <option disabled selected>Seleccione una opción</option>
+            <option value=1>Denuncia</option>
+            <option value=2>Oficio</option>
+            <option value=3>Jefe SRH</option>
+            <option value=4>Otros</option>
+          </select>
+        </div>
+        <div class="col-12">
+          <label for="validationCustom05" class="form-label">Resumen</label>
+          <textarea class="form-control" id="resume" 
+            style="height: 180px;" >
+          </textarea>
+
+        </div>
+
+        <div class="col-12">
+          <button class="btn btn-show" type="submit">Guardar cambios</button>
+          <button class="btn btn-secondary" type="reset">Borrar campos</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+</div>
+<script
+  src="/js/departments/show.js"></script>
+<script
+  src="/js/localities/show.js"></script>
+<script
+  src="/js/recordsTypes/show.js"></script>
+<script
+  src="/js/districts/show.js"></script>
+<script
+  src="/js/courts/show.js"></script>
+<script
+src="/js/records/formEdit.js"
+></script>
+<!--Content end-->
+
+<!--footer and end-->
+<%- include('../partials/footerAndEnd.ejs'); %>
+
+<%- include('../layouts/bottom.ejs'); %>
