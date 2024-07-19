@@ -26,7 +26,7 @@ formLogin.addEventListener("submit", async (e) => {
     const { message, permisos, rol,fullname } = await res.json();
     
     Swal.fire({
-      title: "Good job!",
+      title: "Correcta ejecucion!",
       text: message,
       icon: "success"
     });

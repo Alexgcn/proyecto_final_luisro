@@ -4,12 +4,12 @@ const formUser = document.getElementById('formUser');
 formUser.addEventListener('submit', async (e) => {
     e.preventDefault();
     try {
+        const email = document.getElementById('email').value;
         const lastname = document.getElementById('lastname').value;
         const firstname = document.getElementById('firstname').value;
         const username = document.getElementById('username').value;
         const password = document.getElementById('password').value;
         const role = document.getElementById('role').value;
-        const email = document.getElementById('email').value;
         const confirmPassword = document.getElementById('confirmPassword').value;
 
     if (password !== confirmPassword) {
@@ -23,6 +23,7 @@ formUser.addEventListener('submit', async (e) => {
             'Content-Type': 'application/json'
         },
         body: JSON.stringify({
+            email,
             lastname,
             firstname,
             username,
